@@ -13,6 +13,6 @@ class EnergielabelController extends Controller
      */
     public function getHelloWorldPage(Twig $twig):string
     {
-        return $twig->render('Energielabel::Index');
+        return $twig->render('Energielabel::Energielabel');
     }
 }

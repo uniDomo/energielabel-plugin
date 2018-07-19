@@ -1,1 +1,19 @@
-[]
+
+    {
+        "formatVersion": 1,
+        "menu": {
+          "Config.SettingsTab": {
+            "label": "Einstellungen",
+            "formFields": {
+              "yourText": {
+                "type": "inputText",
+                "required": false,
+                "label": "Dein toller Custom-Text!",
+                "options": {
+                  "defaultValue": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
