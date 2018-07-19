@@ -1,5 +1,7 @@
 ﻿﻿<?php
 
+namespace Energielabel\Providers;
+
 use Plenty\Plugin\Templates\Twig;
 
 class EnergielabelDataProvider
