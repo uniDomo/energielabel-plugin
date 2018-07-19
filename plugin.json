@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "version"           :   "0.0.1",
     "license"           :   "MIT",
@@ -17,4 +18,25 @@
             "description":  "Einbinden des Energielabels" 
         }
     ]
+=======
+{
+    "version"           :   "0.0.1",
+    "license"           :   "MIT",
+    "name"              :   "Energielabel",
+    "shortDescription"  :   { "de": "Plugin zur Anzeige der dem Produkt entsprechenden Energielabel", "en": "TODO add manually" },
+    "namespace"         :   "Energielabel",
+    "author"            :   "Jan Hendrik Hansen",
+    "price"             :   0,
+    "categories"        :   [],
+    "type"              :   "general",
+    "serviceProvider"   :   "Energielabel\\Providers\\EnergielabelServiceProvider",
+    "dataProviders"     :
+    [
+        {
+            "key"       :   "Energielabel\\Providers\\EnergieLabelDataProvider",
+            "name"      :   "Energielabel",
+            "description":  "Einbinden des Energielabels" 
+        }
+    ]
+>>>>>>> abe9a0e2ef12b5a83cc477f9aa09f11cc73431f8
 }
