@@ -16,6 +16,6 @@ class EnergielabelRouteServiceProvider extends RouteServiceProvider
      */
     public function map(Router $router)
     {
-        $router->get('hello-world','Energielabel\Controllers\EnergielabelController@getHelloWorldPage');
+        $router->get('Energielabel','Energielabel\Controllers\EnergielabelController@getHelloWorldPage');
     }
 }
