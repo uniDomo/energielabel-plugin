@@ -8,13 +8,5 @@
     "price"             :   0,
     "categories"        :   [],
     "type"              :   "general",
-    "serviceProvider"   :   "Energielabel\\Providers\\EnergielabelServiceProvider",
-    "dataProviders"     :
-    [
-        {
-            "key"       :   "Energielabel\\Providers\\EnergieLabelDataProvider",
-            "name"      :   "Energielabel",
-            "description":  "Einbinden des Energielabels" 
-        }
-    ]
+    "serviceProvider"   :   "Energielabel\\Providers\\EnergielabelServiceProvider"
 }
