@@ -1,0 +1,17 @@
+{
+  "@plentymarkets/generator-plugin": {
+    "promptValues": {
+      "type": "general"
+    },
+    "answers": {
+      "name": "Energielabel",
+      "author": "Jan Hendrik Hansen",
+      "license": "MIT",
+      "shortDescription": "Plugin zur Anzeige der dem Produkt entsprechenden Energielabel",
+      "price": 0,
+      "version": "0.0.1",
+      "categories": [],
+      "type": "general"
+    }
+  }
+}
