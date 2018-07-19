@@ -12,7 +12,7 @@
     "dataProviders"     :
     [
         {
-            "key"       :   "Energielabel\\Providers\\EnergieLabelDataProvider",
+            "key"       :   "Energielabel\\Providers\\EnergielabelDataProvider",
             "name"      :   "Energielabel",
             "description":  "Einbinden des Energielabels" 
         }
