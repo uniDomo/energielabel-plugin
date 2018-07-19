@@ -1,0 +1,12 @@
+{
+    "version"           :   "0.0.1",
+    "license"           :   "MIT",
+    "name"              :   "Energielabel",
+    "shortDescription"  :   { "de": "Plugin zur Anzeige der dem Produkt entsprechenden Energielabel", "en": "TODO add manually" },
+    "namespace"         :   "Energielabel",
+    "author"            :   "Jan Hendrik Hansen",
+    "price"             :   0,
+    "categories"        :   [],
+    "type"              :   "general",
+    "serviceProvider"   :   "Energielabel\\Providers\\EnergielabelServiceProvider"
+}
