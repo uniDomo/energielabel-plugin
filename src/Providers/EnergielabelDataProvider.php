@@ -8,6 +8,6 @@ class EnergielabelDataProvider
 {
     public function call ( Twig $twig )
     {
-        return $twig->render('Energielabel::Energielabel');
+        return $twig->render('Energielabel::EnergielabelContent');
     }
 }
