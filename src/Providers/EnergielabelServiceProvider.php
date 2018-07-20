@@ -18,3 +18,11 @@ class EnergielabelServiceProvider extends ServiceProvider
         $this->getApplication()->register(EnergielabelRouteServiceProvider::class);
     }
 }
+
+class EnergielabelDataProvider
+{
+    public function call ( Twig $twig )
+    {
+        return $twig->render('Energielabel:Energielabel');
+    }
+}
