@@ -1,12 +1,53 @@
 
 <h1>{{ config("Energielabel.yourText") }}</h1>
-{% for prop in item.documents[0].data.properties %}
+{#{% for prop in item.documents[0].data.properties %}
 
     {% if prop.group.names.propertyGroupId == "60" %}
     
         {% if prop.property.id in [406, 407, 482, 492, 493, 496] %}
-            {{ prop.texts.value }}
+            {{ prop.property.names.name }}: {{ prop.texts.value }}
         {% endif %}
     {% endif %}
 
-{% endfor %}
+{% endfor %} #}
+
+<ul>
+    {% for prop in item.documents[0].data.properties %}
+        {% if prop.group.names.propertyGroupId == "60" %} {# derzeit noch: Unidomo Filter #}
+            {% if prop.property.id in [406, 407, 482, 492, 493, 496] %} {# 397 erstmal nicht berücksichtigen #}
+                {% set labelColor = "grey" %}
+                {% if prop.property.id == 406 %} {# Kühlen #}
+                    {% set eekKuehlen = prop.texts.value %}
+                {% elseif prop.property.id == 407 %} {# Heizen #}
+                    {% set eekHeizen = prop.texts.value %}
+                {% elseif prop.property.id == 482 %} {# Warmwasser #}
+                    {% set eekWarmwasser = prop.texts.value %}
+                {% elseif prop.property.id == 492 %} {# Heizen #}
+                    {% set eekHeizenMax = prop.texts.value %}
+                    {% if eekHeizen is not null %}
+                        {% if eekHeizen == eekHeizenMax %}
+                            {% labelColor = "darkgreen" %}
+                        {% endif %}
+                    {% endif %}
+                {% elseif prop.property.id == 493 %} {# Kühlen #}
+                    {% set eekKuehlenMax = prop.texts.value %}
+                    {% if eekKuehlen is not null %}
+                        {% if eekKuehlen == eekKuehlenMax %}
+                            {% labelColor = "darkgreen" %}
+                        {% endif %}
+                    {% endif %}
+                {% elseif prop.property.id == 496 %} {# Warmwasser #}
+                    {% set eekWarmwasserMax = prop.texts.value %}
+                    {% if eekWarmwasser is not null %}
+                        {% if eekWarmwasser == eekWarmwasserMax %}
+                            {% labelColor = "darkgreen" %}
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+                <li style="background-color: {{ labelColor}};">
+                    {{ prop.property.names.name }}: {{ prop.texts.value }}
+                </li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</ul>
