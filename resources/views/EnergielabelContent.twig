@@ -1,8 +1,8 @@
-<h1>{{ config("Energielabel.yourText") }}</h1>
+{#<h1>{{ config("Energielabel.yourText") }}</h1>#}
 <ul>
    {# {{ dump(item.documents[0].data.properties )}} #}
     {% for prop in item.documents[0].data.properties %}
-    {# {{dump(prop)}} #}
+     {{dump(prop)}} 
         {% if prop.group.names.propertyGroupId == "60" %} {# derzeit noch: Unidomo Filter #}
             {% if prop.property.id in [406, 407, 482, 492, 493, 496] %} {# 397 erstmal nicht berücksichtigen #}
                 {% set labelColor = "grey" %}
