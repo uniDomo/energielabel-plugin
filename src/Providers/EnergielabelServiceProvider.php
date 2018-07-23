@@ -18,8 +18,9 @@ class EnergielabelServiceProvider extends ServiceProvider
 
     }
    
-    public function boot(Twig $twig)
+  /*  public function boot(Twig $twig)
     {
 
     }
+    */
 }
