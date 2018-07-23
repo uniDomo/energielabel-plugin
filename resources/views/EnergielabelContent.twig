@@ -5,7 +5,7 @@
     {% if prop.group.names.propertyGroupId == "60" %}
     
         {% if prop.property.id in [406, 407, 482, 492, 493, 496] %}
-            <h1>{{ config("Energielabel.yourText") }}</h1>
+            {{ prop.property.names.name }}: {{ prop.texts.value }}
         {% endif %}
     {% endif %}
 
