@@ -15,6 +15,6 @@ class EnergielabelServiceProvider extends ServiceProvider
     */
     public function register()
     {
-        $this->getApplication()->register(EnergielabelRouteServiceProvider::class);
+        
     }
 }
