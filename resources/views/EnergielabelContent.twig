@@ -1,9 +1,6 @@
 
 <h1>{{ config("Energielabel.yourText") }}</h1>
 {% set effizienzLabelWerte = ['A+++', 'A++', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G'] %}
-{% for eLW in effizienzLabelWerte %}
-{{ eLW }}
-{% endfor %}
 {% for prop in item.documents[0].data.properties %}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
@@ -17,9 +14,9 @@
         {{ hoechsteEffizienz }} : {{ energieEffizienz }}
     {% endif %}
 {% endfor %} 
-    {#     {% for zahl in 0..8 %}
+         {% for zahl in 0..8 %}
             {% set farbschema = [{'skala': ' ', 'farbe': zahl, 'nummer': zahl }] %}
         {% endfor %}
         {% for schema in farbschema %}
-            {{ schema[nummer] }}
+            {{ nummer[{{ loop.index0 }}] }}
         {% endfor %} #}
