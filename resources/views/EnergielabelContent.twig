@@ -14,10 +14,10 @@
             {% set hoechsteEffizienz = prop.texts.value %}
         {% endif %}
         {{ hoechsteEffizienz }} : {{ energieEffizienz }}
-        {% for zahl in 0..6 %}
-            {% set farbschema = [{'skala': '', 'farbe': zahl, 'nummer': zahl }] %}
-        {% endfor %}
-        {{ dump(farbschema) }}
     {% endif %}
 
 {% endfor %} 
+        {% for zahl in 0..8 %}
+            {% set farbschema = [{'skala': ' ', 'farbe': zahl, 'nummer': zahl }] %}
+        {% endfor %}
+        {{ dump(farbschema) }}
