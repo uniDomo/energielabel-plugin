@@ -3,11 +3,15 @@
 {% for prop in item.documents[0].data.properties %}
 
     {% if prop.group.names.propertyGroupId == "60" %}
-        {# 492, 493, 496 #}
+        {# 492, 493, 494, 495, 496 #}
         {% if prop.property.id in [406, 407, 482, 487, 488] %}
            {# {{ prop.property.names.name }}: #} {{ prop.texts.value }}
-           
+           {% set energieEffizienz = prop.texts.value %}
         {% endif %}
+        {% if prop.property.id in [492, 493, 494, 495, 496] %}
+            {% set hoechsteEffizienz = prop.texts.value %}
+        {% endif %}
+        {{ hoechsteEffizienz }} : {{ energieEffizienz }}
     {% endif %}
 
 {% endfor %} 
