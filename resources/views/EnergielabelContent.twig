@@ -19,7 +19,7 @@
                 {% set hoechsteEffizienzIndex = loop.index %}
             {% endif %}
         {% endfor %}
-        {% effizienzLabelEinzelfarbe == effizienzLabelFarben[ {{ wertIndex - hoechsteEffizienzIndex }} ] %}
+        {% set effizienzLabelEinzelfarbe = effizienzLabelFarben[ {{ wertIndex - hoechsteEffizienzIndex }} ] %}
         {{ effizienzLabelEinzelfarbe }}
         {{ hoechsteEffizienz }} : {{ energieEffizienz }}
     {% endif %}
