@@ -15,9 +15,9 @@
         {{ hoechsteEffizienz }} : {{ energieEffizienz }}
     {% endif %}
 {% endfor %} 
-        {% for zahl in 0..8 %}
+    {#     {% for zahl in 0..8 %}
             {% set farbschema = [{'skala': ' ', 'farbe': zahl, 'nummer': zahl }] %}
         {% endfor %}
         {% for schema in farbschema %}
             {{ schema[nummer] }}
-        {% endfor %}
+        {% endfor %} #}
