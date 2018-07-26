@@ -18,5 +18,5 @@
             {% set farbschema = [{'skala': ' ', 'farbe': zahl, 'nummer': zahl }] %}
         {% endfor %}
         {% for schema in farbschema %}
-            {# {{ nummer[ loop.index0 ] }} #}
+            {{ schema.farbe }}
         {% endfor %} #}
