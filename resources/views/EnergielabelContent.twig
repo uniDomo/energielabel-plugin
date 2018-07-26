@@ -1,6 +1,7 @@
 
 <h1>{{ config("Energielabel.yourText") }}</h1>
 {% set effizienzLabelWerte = ['A+++', 'A++', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G'] %}
+{{ effizienzLabelWerte[1] }}
 {% for prop in item.documents[0].data.properties %}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
