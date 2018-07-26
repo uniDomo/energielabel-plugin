@@ -1,17 +1,23 @@
 
 <h1>{{ config("Energielabel.yourText") }}</h1>
+{% set effizienzLabelWerte = ['A+++', 'A++', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G'] %}
+{% %}
 {% for prop in item.documents[0].data.properties %}
 
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
         {% if prop.property.id in [406, 407, 482, 487, 488] %}
-           {# {{ prop.property.names.name }}: #} {{ prop.texts.value }}
+           {# {{ prop.property.names.name }}:  {{ prop.texts.value }} #}
            {% set energieEffizienz = prop.texts.value %}
         {% endif %}
         {% if prop.property.id in [492, 493, 494, 495, 496] %}
             {% set hoechsteEffizienz = prop.texts.value %}
         {% endif %}
         {{ hoechsteEffizienz }} : {{ energieEffizienz }}
+        {% for zahl in 0..6 %}
+            {% set farbschema = [{'skala': '', 'farbe': zahl, 'nummer': zahl }] %}
+        {% endfor %}
+        {{ dump(farbschema) }}
     {% endif %}
 
 {% endfor %} 
