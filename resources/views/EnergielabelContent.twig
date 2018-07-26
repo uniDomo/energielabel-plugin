@@ -3,7 +3,6 @@
 {% set effizienzLabelWerte = ['A+++', 'A++', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G'] %}
 {% %}
 {% for prop in item.documents[0].data.properties %}
-
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
         {% if prop.property.id in [406, 407, 482, 487, 488] %}
@@ -15,9 +14,10 @@
         {% endif %}
         {{ hoechsteEffizienz }} : {{ energieEffizienz }}
     {% endif %}
-
 {% endfor %} 
         {% for zahl in 0..8 %}
             {% set farbschema = [{'skala': ' ', 'farbe': zahl, 'nummer': zahl }] %}
         {% endfor %}
-        {{ dump(farbschema) }}
+        {% for schema in farbschema %}
+            {{ schema[0] }}
+        {% endfor %}
