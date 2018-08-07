@@ -29,7 +29,7 @@
         {% endif %}
     {% endfor %}
     {% set farbenIndex = hoechsteEffizienzIndex - wertIndex %}
-    {% set farbenIndex = farbenIndex * -1 %}
+    {% set farbenIndex = farbenIndex * -1 + 1 %}
     {% set effizienzLabelEinzelfarbe = effizienzLabelFarben[farbenIndex] %}
     {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }}
