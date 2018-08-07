@@ -1,5 +1,4 @@
 
-<h1>{{ config("Energielabel.yourText") }}</h1>
 <p>Hey</p>
 {% set effizienzLabelWerte = ['A+++', 'A++', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G'] %}
 {% set effizienzLabelFarben = ['#009136','#58A927','#C8D000','#FCEA00','#F9B900','#EA690B','#E3001B'] %}
@@ -34,7 +33,7 @@
     {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }}
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
             <p style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px;">{{ energieEffizienz }}</p>
         </div>
     </div>
