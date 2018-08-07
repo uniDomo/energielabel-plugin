@@ -3,8 +3,6 @@
 <p>Heyo</p>
 {% set effizienzLabelWerte = ['A+++', 'A++', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G'] %}
 {% set effizienzLabelFarben = ['#009136','#58A927','#C8D000','#FCEA00','#F9B900','#EA690B','#E3001B'] %}
-{% set hoechsteEffizienz = "" %}
-{% set energieEffizienz = "" %}
 {% for prop in item.documents[0].data.properties %}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
