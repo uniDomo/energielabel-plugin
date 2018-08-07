@@ -25,11 +25,11 @@
     {% for wert in effizienzLabelWerte %}
         {% if wert == energieEffizienz %}
             {% set wertIndex = loop.index %}
-        {% else %}
+        {% else if wert == hoechsteEffizienz %}
             {% set hoechsteEffizienzIndex = loop.index %}
         {% endif %}
     {% endfor %}
-    {% set farbenIndex = hoechsteEffizienzIndex - wertIndex %}
+    {% set farbenIndex = wertIndex - hoechsteEffizienzIndex %}
     {% set effizienzLabelEinzelfarbe = effizienzLabelFarben[farbenIndex] %}
     {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }}
