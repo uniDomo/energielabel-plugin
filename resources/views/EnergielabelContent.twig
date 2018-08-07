@@ -33,5 +33,9 @@
     {% set effizienzLabelEinzelfarbe = effizienzLabelFarben[farbenIndex] %}
     {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }}
-    <p style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white;">{{ energieEffizienz }}</p>
+    <div class="row">
+        <div class="col-md-2">
+            <p style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; align: center; font-weight: bold; font-size: 20px;">{{ energieEffizienz }}</p>
+        </div>
+    </div>
 {% endif %}
