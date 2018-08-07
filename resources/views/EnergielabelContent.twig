@@ -12,11 +12,9 @@
         {# 492, 493, 494, 495, 496 #}
         {% if prop.property.id in [406, 407, 482, 487, 488] %}
            {# {{ prop.property.names.name }}:  {{ prop.texts.value }} #}
-           {{ prop.texts.value }}
            {% set energieEffizienz = prop.texts.value %}
         {% endif %}
         {% if prop.property.id in [492, 493, 494, 495, 496] %}
-            {{ prop.texts.value }}
             {% set hoechsteEffizienz = prop.texts.value %}
         {% endif %}
     {% endif %}
@@ -33,5 +31,5 @@
     {% set effizienzLabelEinzelfarbe = effizienzLabelFarben[farbenIndex] %}
     {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }}
-    {{ hoechsteEffizienz }} : {{ energieEffizienz }}
+    <p style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white;">{{ energieEffizienz }}</p>
 {% endif %}
