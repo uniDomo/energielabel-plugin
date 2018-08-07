@@ -1,6 +1,6 @@
 <?php
 
-namespace EnergielabelPlugin\Providers;
+namespace Energielabel\Providers;
 
 use Plenty\Plugin\Templates\Twig;
 
@@ -8,6 +8,6 @@ class ContentProvider
 {
     public function call(Twig $twig)
     {
-        return $twig->render('EnergielabelPlugin::EnergielabelContent');
+        return $twig->render('Energielabel::EnergielabelContent');
     }
 }
