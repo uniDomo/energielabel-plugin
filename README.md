@@ -1,1 +1,1 @@
-# Plugin zur Darstellung der Energielabel im Webshop in Plentymarkets
+# Plugin zur Darstellung der Energielabel im Webshop
