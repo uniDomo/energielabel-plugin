@@ -29,7 +29,7 @@
             {% set hoechsteEffizienzIndex = loop.index %}
         {% endif %}
     {% endfor %}
-    {% set farbenIndex = wertIndex - hoechsteEffizienzIndex %}
+    {% set farbenIndex = hoechsteEffizienzIndex - wertIndex %}
     {% set effizienzLabelEinzelfarbe = effizienzLabelFarben[farbenIndex] %}
     {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }}
